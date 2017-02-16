@@ -2,6 +2,7 @@ import map from '../src/basicFunctions/map';
 import filter from '../src/basicFunctions/filter';
 import reduce from '../src/basicFunctions/reduce';
 import zip from '../src/basicFunctions/zip';
+import groupBy from '../src/basicFunctions/groupBy';
 
 test('method creates a new array with the results of calling a provided function on every element in this array', () => {
   const func = item => item * 10;
@@ -33,4 +34,16 @@ test('method creates a new list out of the two supplied by pairing up equally-po
   const arr3 = [0, 1, 2, 3];
   expect(zip(arr1, arr2, arr3)).toEqual([[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3]]);
   expect(zip()).toEqual([]);
+});
+
+test('', () => {
+  const arr = [];
+  const func = elem => elem[0];
+  expect(groupBy(arr, func)).toEqual({});
+});
+
+test('', () => {
+  const arr = ['aaa', 'aa', 'bbbb', 'ttttt'];
+  const func = elem => elem[0];
+  expect(groupBy(arr, func)).toEqual({ a: ['aaa', 'aa'], b: ['bbbb'], t: ['ttttt'] });
 });
