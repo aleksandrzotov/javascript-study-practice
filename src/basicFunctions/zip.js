@@ -1,4 +1,4 @@
-export default(...args) => {
+export default (...args) => {
   if (args.length === 0) {
     return [];
   }

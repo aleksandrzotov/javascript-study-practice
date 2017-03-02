@@ -36,13 +36,13 @@ test('method creates a new list out of the two supplied by pairing up equally-po
   expect(zip()).toEqual([]);
 });
 
-test('', () => {
+test('splits a list into sub-lists stored in an object, based on the result of calling a String-returning function on each element, and grouping the results according to values returned.', () => {
   const arr = [];
   const func = elem => elem[0];
   expect(groupBy(arr, func)).toEqual({});
 });
 
-test('', () => {
+test('splits a list into sub-lists stored in an object, based on the result of calling a String-returning function on each element, and grouping the results according to values returned.', () => {
   const arr = ['aaa', 'aa', 'bbbb', 'ttttt'];
   const func = elem => elem[0];
   expect(groupBy(arr, func)).toEqual({ a: ['aaa', 'aa'], b: ['bbbb'], t: ['ttttt'] });
