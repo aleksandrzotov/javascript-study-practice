@@ -13,3 +13,12 @@ test('make text buffer', () => {
   buffer('!!!');
   expect(buffer()).toBe('abc 123 !!!');
 });
+
+test('make text buffer', () => {
+  const buffer = makeBuffer();
+  buffer('abc ');
+  buffer('123 ');
+  buffer('!!!');
+  buffer.clear();
+  expect(buffer()).toBe('');
+});

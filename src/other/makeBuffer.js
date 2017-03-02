@@ -1,9 +1,13 @@
 export default() => {
   let text = '';
-  return (...args) => {
+  const buffer = (...args) => {
     if (args.length === 0) {
       return text;
     }
     text += args[0];
   };
+  buffer.clear = function () {
+    text = '';
+  };
+  return buffer;
 };
